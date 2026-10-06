@@ -1,7 +1,7 @@
 # Design Requirements
 
 > Write your requirements here once you have them. This file is a blank template.
-> Task: [002 - Write design requirements](../../tasks/active/002-write-design-requirements.md)
+> Tracked in the Issues tab: "Write design requirements".
 
 **How to use:** give each requirement a stable ID (never reuse or renumber one).
 Mark priority as **Must / Should / May**. Fill in the Verification column when you

@@ -1,0 +1,28 @@
+name: Requirement change
+description: Propose a new or changed design requirement
+labels: ["requirement"]
+body:
+  - type: input
+    id: req_id
+    attributes:
+      label: Requirement ID
+      description: Existing ID (e.g. REQ-E-003) or "new"
+  - type: textarea
+    id: statement
+    attributes:
+      label: Requirement
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options: ["Must", "Should", "May"]
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+  - type: textarea
+    id: verification
+    attributes:
+      label: How will it be verified?

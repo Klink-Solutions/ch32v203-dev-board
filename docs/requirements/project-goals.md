@@ -1,7 +1,7 @@
 # Project Goals
 
 > Write your goals here once you have them. This file is intentionally blank.
-> Task: [001 - Define project goals](../../tasks/active/001-define-project-goals.md)
+> Tracked in the Issues tab: "Define project goals".
 
 ## Purpose
 

@@ -1,0 +1,22 @@
+name: Design decision
+description: A choice to research and record (part, topology, tool)
+labels: ["decision"]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: What needs deciding?
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options
+      value: |
+        1.
+        2.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: When decided, record it in docs/decisions/ and link it here.

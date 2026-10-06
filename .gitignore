@@ -6,16 +6,13 @@ Thumbs.db
 .vscode/
 .idea/
 
-# KiCad (adjust once the EDA tool is chosen, task 003)
-*-backups/
-*.kicad_prl
-*-cache.lib
-*-rescue.lib
-*-rescue.dcm
-fp-info-cache
-_autosave-*
+# Fusion / EAGLE-format backups and autosaves
+*.b#*
+*.s#*
+*.l#*
 *.bak
 *.tmp
+*~
 
 # Firmware build output
 build/

@@ -43,7 +43,6 @@ _TBD: filled in once requirements are final._
 | [`firmware/`](firmware/) | Firmware source and notes |
 | [`test/`](test/) | Test plans, reports, scripts |
 | [`manufacturing/`](manufacturing/) | Gerbers, assembly files, fab quotes |
-| [`tasks/`](tasks/) | Task tracking (see [`tasks/README.md`](tasks/README.md)) |
 | [`references/`](references/) | Reference designs, app notes, links |
 
 ## Building / Ordering
@@ -52,8 +51,10 @@ _TBD._
 
 ## Project Log
 
+Work is tracked in the [Issues tab](../../issues) and the [Projects board](../../projects).
 Progress is recorded in [`docs/journal/`](docs/journal/) and in the commit history.
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the workflow.
 
 ## License
 
-_TBD: see task 006._
+_TBD (tracked in the Issues tab)._
