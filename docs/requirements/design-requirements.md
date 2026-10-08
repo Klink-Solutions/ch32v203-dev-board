@@ -1,10 +1,9 @@
 # Design Requirements
 
-**How to use:** every requirement has a stable ID (never reuse or renumber one).
-Priority is **Must / Should / May**: *Must* = the board has failed without it,
-*Should* = wanted, can be cut if layout or cost demand it, *May* = nice to have.
-Verification says how each requirement will be proven (see `test/plans/`).
-The XIAO outline is small, so Should/May items are the first to cut if they do not fit.
+**How to use:** 
+* Every requirement has a ID 
+* Priority is **Must / Should / May**; helps decide priorities when space gets tight.
+* Verification says how each requirement will be proven.
 
 ## Revision history
 
