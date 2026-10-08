@@ -1,60 +1,73 @@
 # CH32V203C8T6 Dev Board
 
-A XIAO-sized / XIAO-compatible development board based on the WCH CH32V203C8T6 microcontroller.
+### A XIAO-sized development board based on the WCH CH32V203C8T6 microcontroller.
 
-> **Status:** Pre-design. Project goals and design requirements are not yet defined.
-> This README is a skeleton and will be filled in as decisions are made.
+## Description
+ XIAO-compatible development board based on the WCH CH32V203C8T6 microcontroller to allow for low power custom applications.  
 
----
+#### Features
+  * User addressable multi colour led
+  * Boot & reset buttons on chip
+  * Integrated single cell lipo battery charging
+    * with optional jst 2.0 connector
+  * Low power
+  * USBC for power,charging and programming
+  * I2C
+  * SPI
+  * UART
+  * TBD
 
-## Overview
+## Version History
+* 0.1
+    * Initial design rules
+* 0.2
+    * Part sourcing to meet set requierments
 
-_TBD: short description of what this board is and who it is for._
+## Road Map
+
+* Design shematic
+* Define board size (based on Xiao layout)
+* Route PCB
+* DRC
+* Source & fabricate
+* Arduino compatible firmwear
+  
+## Screenshots
+
+## BOM
+
+See [`bom/`](bom/)
 
 ## Goals
 
-_TBD: see [`docs/requirements/project-goals.md`](docs/requirements/project-goals.md)._
+See [`docs/requirements/project-goals.md`](docs/requirements/project-goals.md)._
 
 ## Design Requirements
 
-_TBD: see [`docs/requirements/design-requirements.md`](docs/requirements/design-requirements.md)._
+See [`docs/requirements/design-requirements.md`](docs/requirements/design-requirements.md)._
 
-## Specifications
-
-_TBD: filled in once requirements are final._
-
-| Item | Value |
-|------|-------|
-| MCU | WCH CH32V203C8T6 |
-| Form factor | _TBD_ |
-| Power | _TBD_ |
-| USB | _TBD_ |
-| Pinout | _TBD_ |
-
-## Repository Layout
+## Repository content
 
 | Path | Contents |
 |------|----------|
-| [`docs/`](docs/) | Requirements, design notes, decision records, meeting notes, build journal |
+| [`docs/`](docs/) | Requirements, design notes, decision records, meeting notes |
 | [`pcb/`](pcb/) | Schematics, layout, custom libraries, simulations, generated outputs |
 | [`bom/`](bom/) | Bill of materials and archived revisions |
-| [`datasheets/`](datasheets/) | Component datasheets, organized by type |
-| [`mechanical/`](mechanical/) | Enclosure, STEP models, drawings |
+| [`datasheets/`](datasheets/) | Component datasheets|
 | [`firmware/`](firmware/) | Firmware source and notes |
-| [`test/`](test/) | Test plans, reports, scripts |
-| [`manufacturing/`](manufacturing/) | Gerbers, assembly files, fab quotes |
+| [`manufacturing/`](manufacturing/) | Gerbers, assembly files |
 | [`references/`](references/) | Reference designs, app notes, links |
 
-## Building / Ordering
+## Help
 
-_TBD._
+Contact author 
 
-## Project Log
+## Author
 
-Work is tracked in the [Issues tab](../../issues) and the [Projects board](../../projects).
-Progress is recorded in [`docs/journal/`](docs/journal/) and in the commit history.
-See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the workflow.
+Lucas Klemmer  
+klinksolutions22@gmail.com
 
 ## License
+MIT LIcence
 
-_TBD (tracked in the Issues tab)._
+If anyone ends up reproducing this device or making it even bettter I would be happy to see your improvements and add them to the oficial release.
