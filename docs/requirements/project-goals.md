@@ -1,24 +1,22 @@
 # Project Goals
 
-> Write your goals here once you have them. This file is intentionally blank.
-> Tracked in the Issues tab: "Define project goals".
-
 ## Purpose
 
-<!-- Why does this board exist? -->
+Create a useful dev board that tests core functionality of CHV32 for use in other projects
 
 ## Target users
 
-<!-- Who will use it? -->
+Me 
 
-## Success criteria
-
-<!-- How will you know the project succeeded? -->
+Other tinkerer's 
 
 ## Non-goals
+Wifi or blutooth
 
-<!-- What is explicitly out of scope? -->
+On chip sensors
 
 ## Constraints
-
-<!-- Budget, timeline, tools, fab limits, program (Hack Club) rules, etc. -->
+### Timeline 
+1 week design, 1 week build
+### Budget
+$60 USD including shipping and tax
