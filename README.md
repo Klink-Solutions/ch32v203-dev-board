@@ -40,11 +40,11 @@ See [`bom/`](bom/)
 
 ## Goals
 
-See [`docs/requirements/project-goals.md`](docs/requirements/project-goals.md)._
+See [`docs/project-goals.md`](docs/project-goals.md).
 
 ## Design Requirements
 
-See [`docs/requirements/design-requirements.md`](docs/requirements/design-requirements.md)._
+See [`docs/design-requirements.md`](docs/design-requirements.md).
 
 ## Repository content
 
