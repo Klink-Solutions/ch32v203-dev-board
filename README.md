@@ -3,10 +3,10 @@
 ### A XIAO-sized development board based on the WCH CH32V203C8T6 microcontroller.
 
 ## Description
- XIAO-compatible development board based on the WCH CH32V203C8T6 microcontroller to allow for low power custom applications.  
+ XIAO ish -compatible development board based on the WCH CH32V203C8T6 microcontroller to allow for low power custom applications.  
 
 #### Features
-  * User addressable multi colour led
+  * User addressable multi colour led (Only on USB power)
   * Boot & reset buttons on chip
   * Integrated single cell lipo battery charging
     * with optional jst 2.0 connector
@@ -15,21 +15,15 @@
   * I2C
   * SPI
   * UART
-  * TBD
+  * & Many More
 
 ## Version History
 * 0.1
-    * Initial design rules
-* 0.2
-    * Part sourcing to meet set requierments
+    * Initial release 
 
 ## Road Map
 
-* Design shematic
-* Define board size (based on Xiao layout)
-* Route PCB
-* DRC
-* Source & fabricate
+* Fabrication
 * Arduino compatible firmwear
   
 ## Screenshots
@@ -54,9 +48,6 @@ See [`docs/design-requirements.md`](docs/design-requirements.md).
 | [`pcb/`](pcb/) | Schematics, layout, custom libraries, simulations, generated outputs |
 | [`bom/`](bom/) | Bill of materials and archived revisions |
 | [`datasheets/`](datasheets/) | Component datasheets|
-| [`firmware/`](firmware/) | Firmware source and notes |
-| [`manufacturing/`](manufacturing/) | Gerbers, assembly files |
-| [`references/`](references/) | Reference designs, app notes, links |
 
 ## Help
 
