@@ -36,7 +36,7 @@
 | [FRC0603F1003TS](https://www.lcsc.com/product-detail/C2907034.html) | RES 100K OHM 0603 | 100 | $0.00 | $0.00 | [LCSC](https://www.lcsc.com/product-detail/C2907034.html) |
 | [FRC0603F4701TS](https://www.lcsc.com/product-detail/C2906980.html) | RES 4.7K OHM 0603 | 100 | $0.00 | $0.00 | [LCSC](https://www.lcsc.com/product-detail/C2906980.html) |
 | **Parts subtotal** | — | — | — | **$24.35** | — |
-| **Tax & shipping** | — | — | — | **$0.00** | — |
-| **Total** | — | — | — | **$24.35** | — |
+| **Tax & shipping** | — | — | — | **$20.33** | — |
+| **Total** | — | — | — | **$44.68** | — |
 
-$40.65 left of the tier's funding.
+$20.32 left of the tier's funding.
