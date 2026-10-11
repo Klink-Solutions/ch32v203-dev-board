@@ -1,6 +1,8 @@
 # CH32V203C8T6 Dev Board
 
 ### A XIAO-sized development board based on the WCH CH32V203C8T6 microcontroller.
+<img width="943" height="930" alt="Screenshot 2026-10-11 at 21 53 14" src="https://github.com/user-attachments/assets/b27a28bd-5592-461d-91eb-5f29b1c1bbb4" />
+
 
 ## Description
  XIAO ish -compatible development board based on the WCH CH32V203C8T6 microcontroller to allow for low power custom applications.  
