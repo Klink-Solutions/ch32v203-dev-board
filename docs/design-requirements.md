@@ -61,13 +61,3 @@
 | REQ-C-001 | The PCB shall be a JLCPCB standard 4-layer board and obey its DRC. | Must | Fixed fab and layer count to control cost. | Run the DRC with JLCPCB rules. | 
 | REQ-C-002 | Five complete boards (PCB, parts, shipping) shall cost no more than USD 60. | Must | Project budget. | Keep Full BOM with JLC quote and shipping cost overhead | 
 | REQ-C-003 | All parts should be in stock at the chosen supplier/suppliers when the order is placed. | should | Avoids backlog. | | 
-
-
-## Open questions
-- **Crystal and USB:** Double check whether the CH32V203 USB works without an external crystal (HSI is +-1.6 % to +-2.2 %; USB full speed asks for 0.25 %). If it needs one, REQ-E-014 must change.
-- **Reverse battery:** the power-path FET isolates the system from a reversed cell, but the charger and the battery divider sit on the raw battery net. A series P-FET at the battery connector would meet REQ-E-008.
-- **LDO copper:** the TLV75733P only reaches its 100.8 C/W rating on TI's evaluation board; keep generous copper on its pins (350 mA is about 0.4-0.5 W).
-- **Charge-current resistor:** R7 is 10 kOhm; confirm against the MCP73831 datasheet (I = 1000 / R in kOhm).
-- **RGB LED data level:** the LED runs from 5 V with a 3.3 V data signal. Confirm the input-high threshold of the fitted WS2812B (the BOM has the WS2812B-B/W, C114586) is at or below 3.3 V, or pick a variant whose threshold is 0.55 x VDD.
-- **BOM:** the LCSC export has no lines for the 4.7 kOhm and 100 kOhm resistors, still lists the SMD JST (now an optional through-hole footprint, so remove or mark do-not-fit), and uses 18 pF load capacitors for the crystal; check against the footprint.
-- **More power later:** a fuse with about 1.1 A hold would allow a 500 mA load plus 250 mA charging, but needs a Schottky rated 1 A or more at D1 and a supply that can deliver it; costs size and money.
