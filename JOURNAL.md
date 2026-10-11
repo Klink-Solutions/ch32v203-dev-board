@@ -6,7 +6,7 @@
 > [!NOTE]
 > This devlog is mirrored from [Half Life](https://halflife.hackclub.com). Editing it here will not change the platform's copy, and the next sync overwrites this file.
 
-> A ultra low power XIAO sized development board to based on the WCH CH32V203C8T6
+> A ultra low power XIAO ish  sized development board to based on the WCH CH32V203K8T6
 
 | Week | Tier | Hours logged | Entries |
 | --- | --- | --- | --- |
