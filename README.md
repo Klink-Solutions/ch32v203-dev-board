@@ -1,23 +1,31 @@
-# CH32V203C8T6 Dev Board
+# Klink CH32V203 Dev Board
 
-### A XIAO-sized development board based on the WCH CH32V203C8T6 microcontroller.
+### A compact, breadboard-friendly RISC-V development board built around the
+WCH CH32V203K8T6, with USB-C power and programming and built-in LiPo charging.
+
 <img width="943" height="930" alt="Screenshot 2026-10-11 at 21 53 14" src="https://github.com/user-attachments/assets/b27a28bd-5592-461d-91eb-5f29b1c1bbb4" />
 
+## Why this exists
 
-## Description
- XIAO ish -compatible development board based on the WCH CH32V203C8T6 microcontroller to allow for low power custom applications.  
+Most small dev boards use ARM or ESP32 chips. This board is built on **RISC-V**
+(WCH's QingKe core, up to 144 MHz) because of its open source foundation, low price and fast interrupt speeds (it comes with the downside of a less mature development development environment - especially if you wanted to program with the arduino IDE). What started as a XIAO-style board, grew to a larger 17.8 x 49 mm to fit the power path and USB-C. It is also a test bed for the same CH32V203 that I plan to reuse in a later personal project.
 
-#### Features
-  * User addressable multi colour led (Only on USB power)
-  * Boot & reset buttons on chip
-  * Integrated single cell lipo battery charging
-    * with optional jst 2.0 connector
-  * Low power
-  * USBC for power,charging and programming
-  * I2C
-  * SPI
-  * UART
-  * & Many More
+It is deliberately kept simple: no Wifi or Bluetooth & no on-board sensors to maintain low power power consumption. The onboard battery circuitry makes it a good alternative for making yor own battery powered devices.
+
+## What it does
+
+* CH32V203K8T6 32-bit RISC-V MCU (LQFP32), 64 KB flash
+* USB-C for power, charging and programming
+* Single-cell LiPo charging, 100 mA by default, with an optional 2.0 mm JST connector
+* Power path: runs from USB when plugged in, from the battery otherwise
+* 3.3 V rail: up to 250-350 mA on USB, up to 500 mA on battery
+* Resettable fuse on the USB input
+* WS2812B RGB LED (works on USB power only) and a charge-status LED
+* BOOT and RESET buttons
+* Battery voltage readable by firmware (ADC divider)
+* 36 breadboard pads with I2C, SPI, UART and more broken out
+* 4-layer board, hand-solderable parts
+
 
 ## Version History
 * 0.1
@@ -28,11 +36,34 @@
 * Fabrication
 * Arduino compatible firmwear
   
-## Screenshots
-
 ## BOM
-
-See [`bom/`](bom/)
+|Index|Manufacturer Part Number    |Manufacturer Name        |Description                                                                                                                      |Assemblies|Attrition %|Requested Quantity 1|Pack Quantity 1|LCSC Part Number|Unit Price 1|Extended Price 1|Minimum Order Quantity 1|Datasheet                                         |Reference Designator         |
+|-----|----------------------------|-------------------------|---------------------------------------------------------------------------------------------------------------------------------|----------|-----------|--------------------|---------------|----------------|------------|----------------|------------------------|--------------------------------------------------|-----------------------------|
+|1    |B3U-1000P                   |OMRON                    |Tactile Switch SPST 153gf 1.6mm SMD (SMT) Tab 3mm x 2.5mm Surface Mount                                                          |5         |           |2                   |10             |C231329         |0.1885      |1.89            |5                       |https://www.lcsc.com/product-detail/C231329.html  |BOOT, RESET                  |
+|2    |CGA0603X7R104K100JT         |HRE                      |100nF ±10% 10V Ceramic Capacitor X7R 0603                                                                                        |5         |           |7                   |100            |C36911391       |0.0053      |0.53            |100                     |https://www.lcsc.com/product-detail/C36911391.html|C1, C2, C3, C8, C11, C13, C14|
+|3    |CGA0603X5R225K100JT         |HRE                      |2.2uF ±10% 10V Ceramic Capacitor X5R 0603                                                                                        |5         |           |3                   |50             |C7503508        |0.0113      |0.57            |50                      |https://www.lcsc.com/product-detail/C7503508.html |C4, C5, C9                   |
+|4    |C0603C180F8HACAUTO          |KEMET                    |18pF X8R ±1% 10V 0603 Ceramic Capacitors RoHS                                                                                    |5         |           |2                   |10             |C3882391        |0.1146      |1.15            |5                       |https://www.lcsc.com/product-detail/C3882391.html |C6, C7                       |
+|5    |CL10A475KP8NNNC             |Samsung Electro-Mechanics|4.7uF ±10% 10V Ceramic Capacitor X5R 0603                                                                                        |5         |           |2                   |50             |C1705           |0.0133      |0.67            |50                      |https://www.lcsc.com/product-detail/C1705.html    |C10, C12                     |
+|6    |PMEG3005EJ,115              |Nexperia                 |Diode 30V 500mA Surface Mount SOD-323F                                                                                           |5         |           |1                   |5              |C552853         |0.1968      |0.98            |5                       |https://www.lcsc.com/product-detail/C552853.html  |D1                           |
+|7    |WS2812B-B/W                 |Worldsemi                |SMD5050-4P LED Addressable, Specialty                                                                                            |5         |           |1                   |5              |C114586         |0.1042      |0.52            |5                       |https://www.lcsc.com/product-detail/C114586.html  |D2                           |
+|8    |0603L050YR                  |Littelfuse               |Polymeric PTC Resettable Fuse 6V 500mA Surface Mount 0603                                                                        |5         |           |1                   |5              |C207015         |0.194       |0.97            |5                       |https://www.lcsc.com/product-detail/C207015.html  |F1                           |
+|9    |CH32V203K8T6                |WCH                      |RISC-V 32 Bit 144MHz LQFP-32(7x7) Microcontrollers                                                                               |5         |           |1                   |5              |C5372188        |0.9843      |4.92            |1                       |https://www.lcsc.com/product-detail/C5372188.html |IC1                          |
+|10   |TYPE-C16PIN                 |SHOU HAN                 |USB-C (USB TYPE-C) Receptacle Connector 16 Position Surface Mount, Right Angle                                                   |5         |           |1                   |10             |C393939         |0.0624      |0.62            |10                      |https://www.lcsc.com/product-detail/C393939.html  |J1                           |
+|11   |XY-S2B-PH-SM4-TB            |XYECONN                  |Surface Mount, Right Angle PH 250V 2 1 2mm 2A 2P -25℃~+85℃ Tin Beige 1x2P SMD,P=2mm,Surface Mount,Right Angle Headers, Male Pins |5         |           |1                   |10             |C54582899       |0.0419      |0.42            |10                      |https://www.lcsc.com/product-detail/C54582899.html|J2                           |
+|12   |APT1608SURCK                |Kingbright               |Red 645nm LED Indication - Discrete 1.95V 0603                                                                                   |5         |           |1                   |5              |C5875723        |0.1264      |0.63            |5                       |https://www.lcsc.com/product-detail/C5875723.html |LED1                         |
+|13   |DMG2305UX-7                 |HXY MOSFET               |P-Channel 20V 5A 1.31W Surface Mount SOT-23                                                                                      |5         |           |1                   |20             |C5261054        |0.0376      |0.75            |20                      |https://www.lcsc.com/product-detail/C5261054.html |Q1                           |
+|14   |FRC0603J201 TS              |FOJAN                    |200Ω ±5% 100mW 0603 Thick Film Resistor                                                                                          |5         |           |1                   |100            |C2907123        |0.0017      |0.17            |100                     |https://www.lcsc.com/product-detail/C2907123.html |R1                           |
+|15   |FRC0603F5101TS              |FOJAN                    |5.1kΩ ±1% 100mW 0603 Thick Film Resistor                                                                                         |5         |           |2                   |200            |C2907044        |0.002       |0.4             |100                     |https://www.lcsc.com/product-detail/C2907044.html |R3, R4                       |
+|16   |FRC0603F1002TS              |FOJAN                    |10kΩ ±1% 100mW 0603 Thick Film Resistor                                                                                          |5         |           |1                   |100            |C2906982        |0.002       |0.2             |100                     |https://www.lcsc.com/product-detail/C2906982.html |R7                           |
+|17   |FRC0603F1004TS              |FOJAN                    |1MΩ ±1% 100mW 0603 Thick Film Resistor                                                                                           |5         |           |2                   |100            |C2907003        |0.0019      |0.19            |100                     |https://www.lcsc.com/product-detail/C2907003.html |R8, R9                       |
+|18   |TLV75733PDBVR               |TI                       |3.3V Positive Fixed SOT-23-5 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators RoHS                                     |5         |           |1                   |5              |C485517         |0.2014      |1.01            |5                       |https://www.lcsc.com/product-detail/C485517.html  |U1                           |
+|19   |MCP73831T-2ACI/OT           |MICROCHIP                |3.75V~6V 1 Lithium Battery 550mA SOT-23-5 Battery Chargers RoHS                                                                  |5         |           |1                   |5              |C424093         |0.7761      |3.88            |1                       |https://www.lcsc.com/product-detail/C424093.html  |U2                           |
+|20   |NX5032GA-8MHZ-EXS00A-CG07039|NDK                      |Crystal 8MHz ±20ppm 18pF 300Ω SMD5032-2P                                                                                         |5         |           |1                   |5              |C1986270        |0.4898      |2.45            |1                       |https://www.lcsc.com/product-detail/C1986270.html |X1                           |
+|21   |PZ254-1-18-Z-8.5            |HCTL                     |Pin Header 18 Position 2.54mm Pitch Single Row Through Hole -40℃~+105℃                                                           |5         |           |2                   |10             |C2894941        |0.2216      |2.22            |5                       |https://www.lcsc.com/product-detail/C2894941.html |                             |
+|22   |FRC0603F1003TS              |FOJAN                    |RES 100K OHM 0603                                                                                                                |5         |           |1                   |100            |C2906980        |0.0021      |0.21            |100                     |https://www.lcsc.com/product-detail/C2907123.html |R2                           |
+|23   |FRC0603F4701TS              |FOJAN                    |RES 4.7K OHM 0603                                                                                                                |5         |           |3                   |100            |C2907034        |0.0022      |0.22            |100                     |https://www.lcsc.com/product-detail/C2907123.html |R5, R6, R10                  |
+|25   |                            |JLC PCB                  |PCB                                                                                                                              |5         |           |5                   |5              |N/A             |            |11.2            |5                       |                                                  |                             |
+|     |                            |                         |                                                                                                                                 |5         |           |                    |               |                |3.7814      |36.77           |                        |                                                  |                             |
 
 ## Goals
 
@@ -46,9 +77,9 @@ See [`docs/design-requirements.md`](docs/design-requirements.md).
 
 | Path | Contents |
 |------|----------|
-| [`docs/`](docs/) | Requirements, design notes, decision records, meeting notes |
-| [`pcb/`](pcb/) | Schematics, layout, custom libraries, simulations, generated outputs |
-| [`bom/`](bom/) | Bill of materials and archived revisions |
+| [`docs/`](docs/) | Requirements, design notes|
+| [`pcb/`](pcb/) | Schematics, layout, CAD, generated outputs |
+| [`bom/`](bom/) | Bill of materials |
 | [`datasheets/`](datasheets/) | Component datasheets|
 
 ## Help
@@ -61,6 +92,6 @@ Lucas Klemmer
 klinksolutions22@gmail.com
 
 ## License
-MIT LIcence
+MIT LIcense
 
 If anyone ends up reproducing this device or making it even bettter I would be happy to see your improvements and add them to the oficial release.
