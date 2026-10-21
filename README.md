@@ -4,6 +4,7 @@
 WCH CH32V203K8T6, with USB-C power and programming and built-in LiPo charging.
 
 <img width="943" height="930" alt="Screenshot 2026-10-11 at 21 53 14" src="https://github.com/user-attachments/assets/b27a28bd-5592-461d-91eb-5f29b1c1bbb4" />
+<img width="3000" height="2000" alt="Klink_Dev_Board v14" src="https://github.com/user-attachments/assets/9854dfa8-39ef-4895-8e42-5927866322be" />
 
 ## Why this exists
 
